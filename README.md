@@ -1,122 +1,87 @@
-# InnerOrbit: *Mood Journal, Mood Tracker, & Reflective Social Space*
+# Terraform Practice
 
-```md
-⚠️ Work In Progress
-This project is currently under active development and is not yet complete.
-Expect bugs, missing features, and unpolished UI while construction is underway.
+This repository is a personal sandbox for learning and experimenting with deploying full-stack applications to [Amazon Web Services (AWS).](https://aws.amazon.com/) It is focused on understanding cloud deployment workflows using tools like Elastic Beanstalk and S3.
+
+## ⚠️ Disclaimer
+
+This repository was created as a self-guided learning project for exploring AWS deployment strategies. It is intended solely for educational purposes and may include in-progress, incomplete, or non-production configurations. The goal is to deepen my understanding of cloud hosting and deployment mechanics through hands-on experimentation.
+
+
+## Purpose
+
+To gain hands-on experience with:
+- Deploying full-stack applications on AWS
+- Using AWS Elastic Beanstalk for Node.js and React apps
+- Hosting static assets with S3
+- Managing environment variables and deployment pipelines
+- Troubleshooting cloud service issues in real-time
+
+## Tools & Technologies
+
+- AWS Elastic Beanstalk
+- Amazon S3
+- Node.js / Express
+- React
+- AWS CLI
+- Docker (for containerized deployments)
+
+## Getting Started
+
+> These steps will guide you through deploying a simple app using AWS services.
+
+### Prerequisites
+- AWS account with appropriate IAM permissions
+- AWS CLI installed and configured (aws configure)
+- Node.js and npm installed locally
+- A simple full-stack app to deploy (or use a sample from this repo)
+
+### Steps
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/your-username/AWS-Deploy-Test.git
+   cd AWS-Deploy-Test
+
+2. Install dependencies for both client and server (if present).
+
+3. Set up your Elastic Beanstalk environment:
+
+   ```bash
+   eb init
+
+4. Create and deploy the environment:
+
+   ```bash
+   eb create my-env-name
+   eb deploy
+
+5. (Optional) Use Amazon S3 for static assets:
+- Create a bucket via the AWS Console
+- Upload static files
+- Configure permissions and public access settings
+
+6. Monitor and troubleshoot with:
+
+   ```bash
+   eb status
+   eb logs
+
+## Folder Structure
+
+```bash
+AWS-Deploy-Test/
+├── client/              # React frontend  
+├── server/              # Node.js backend  
+├── .elasticbeanstalk/   # EB configuration files  
+└── README.md            # This file  
 ```
 
-## **Description**
+## Resources
 
-**InnerOrbit** is a full-stack, responsive, and interactive single-page application built using the MERN stack with GraphQL and JWT authentication. This application solves a real-world problem using real data and is designed with a smooth user experience and polished, professional UI in mind. 
+[**AWS Elastic Beanstalk Docs:**](https://docs.aws.amazon.com/elastic-beanstalk/)
 
-**Problem Solved:** People struggle to understand emotional patterns and maintain consistent emotional routines. Traditional journals often lack visual feedback, encouragement, or the option to connect meaningfully with others without oversharing or losing privacy.
+[**AWS CLI Command Reference:**](https://docs.aws.amazon.com/cli/latest/)
 
-**Concept:** InnerOrbit is a social ritual app — a place where users occasionally share glimpses of their mood or thoughts into a public “galaxy” while still maintaining control, anonymity, and consent.
+[**AWS S3 Documentation:**](https://docs.aws.amazon.com/s3/)
 
-**App Overview**
-* Mood Tracker: Calendar-based mood logging with color coding and editable daily entries.
-* Mood Journal: Private journal visualized as constellations of stars, each representing an entry.
-* Mood Nebulas: Optional public feed for anonymous, tagged reflections with light interaction.
-* Constellation Cards: Weekly reflection prompts with the option to share responses anonymously.
-* Orbits: Invite-only pods for sharing progress and encouragement with close friends.
-* Self-Care Companion: Digital pet that reflects your real-world wellness habits.
-* Privacy & Auth: Secure JWT authentication with private-first, consent-based sharing.
-* Design & Deployment: Mobile-first calm UI, Tailwind CSS, and CI/CD deployment on Render.  
-  
-  
-| **Key Features**                                  | **Technology Stack**                                                  |
-| ------------------------------------------------- | --------------------------------------------------------------------- |
-| Mobile-first, responsive design                   | **Languages:** JavaScript                                             |
-| Component-based architecture                      | **Front-End:** React, Apollo Client, React Router                     |
-| GraphQL for client-server communication           | **Back-End:** Node.js, Express.js, Apollo Server, GraphQL             |
-| MongoDB integration with Mongoose ODM             | **Database:** MongoDB                                                 |
-| Secure user authentication with JWT               | **Authentication:** JWT                                               |
-| Protected routes and user sessions                | **Security:** bcrypt, dotenv                                          |
-| GitHub Actions for CI/CD                          | **CI/CD:** GitHub Actions                                             |
-| Styled with [chosen approach]                     | **Styling:** [styled-components / Chakra UI / Ant Design / Pure CSS]  |   
-| Deployed on Render                                | **Deployment:** Render                                                |
-
-
-## Table of Contents  **(DO NOT FORGET TO UPDATE THIS AND DELETE ANY SECTIONS YOU ARE NOT USING!)**
-
-- [Screenshots](#screenshots)
-- [Walkthrough Video](#walkthrough-video)
-- [Live Demo](#live-demo)
-- [Future Development](#future-development)
-- [Tests](#tests)
-- [Documentation](#documentation)
-- [Acknowledgements](#acknowledgements)
-- [Contact](#contact)
-
-## Screenshots
-
-![projectscreenshot](LINK-GOES-HERE!)  **(DO NOT FORGET TO UPDATE THIS!)**  
-
-## Walkthrough Video
-
-- currently unavailable
-
-## Live Demo
-
-- [NAME-OF-PROJECT](https://NAME-OF-PROJECT.onrender.com/)  **(DO NOT FORGET TO UPDATE THIS!)**  
-
-## Database Schema **(DO NOT FORGET TO UPDATE THIS!)**  
-Field     |  Type      |  Required  |  Description              |
-| ------- | ---------- | ---------- | ------------------------- |
-_id       |  ObjectId  |  Yes       |  Auto-generated unique ID |
-username  |  String    |  Yes       |  User's display name      |
-email     |  String	   |  Yes       |  Must be unique           |
-password  |  String    |  Yes       |  Hashed password          |
-logs      |  [Log]     |  No        |  Reference to user's logs |
-
-
-## Future Development
-
- - Expand data model and relationships
- - Integrate additional APIs
- - Add user dashboard with analytics
- - Implement automated testing
- - Enhance accessibility and internationalization
-
-## Tests
-
-There are currently no automated tests for this project
-
-## Documentation
-
-> **Note:** INSERT ANY NOTES ABOUT DOCUMENTATION HERE, DELETE IF THERE ARE NONE!
-
-- [Repository](https://github.com/YOUR-REPO-URL-GOES-HERE) **(DO NOT FORGET TO UPDATE THIS!)**  
-- [Google Slides](https://docs.google.com/presentation/YOUR-SLIDES-URL-GOES-HERE) **(DO NOT FORGET TO UPDATE THIS!)**  
-- [Google Doc](https://docs.google.com/document/YOUR-GOOGLE-DOC-URL-GOES-HERE) **(DO NOT FORGET TO UPDATE THIS!)**  
-
-## Acknowledgements
-
-1. (ANY OUTSIDE AID) **(DO NOT FORGET TO UPDATE THIS!)**  
-2. (ANY INSPIRATIONS OR RESOURCES) **(DO NOT FORGET TO UPDATE THIS!)**  
-
-## Contact
-
-If you have any questions, feel free to contact the team:
-
-Project Lead: [**Alex Menendez**](https://alex-menendez.onrender.com/) – Full-Stack Developer with a focus on UI/UX and team collaboration.
-
-- **Website**: [Crafted-By-Alex](https://alex-menendez.onrender.com/)
-- **LinkedIn**: [in/alex-d-menendez](https://www.linkedin.com/in/alex-d-menendez/)
-- **GitHub**: [alexis-menendez](https://github.com/alexis-menendez)
-- **Email**: [alexis.menendez@austincc.edu](https://alex-menendez.onrender.com/contact)
- 
-
-- [**Portfolio**](https://FRONTEND-LEAD-NAME.onrender.com/)
-- **LinkedIn**: [in/FRONTEND-LEAD-NAME](https://www.linkedin.com/in/FRONTEND-LEAD-NAME/)
-- **GitHub**: [FRONTEND-LEAD-USERNAME](https://github.com/alexis-menendez)
-- **Email**: [FRONTEND-LEAD-NAME@email.com](https://FRONTEND-LEAD-NAME.onrender.com/contact)
-
-Backend Lead: [**BACKEND-LEAD-NAME**](https://BACKEND-LEAD-NAME.onrender.com/) – BLAH, BLAH, BLAH  
-
-- [**Portfolio**](https://BACKEND-LEAD-NAME.onrender.com/)
-- **LinkedIn**: [in/FRONTEND-LEAD-NAME](https://www.linkedin.com/in/FRONTEND-LEAD-NAME/)
-- **GitHub**: [FRONTEND-LEAD-USERNAME](https://github.com/alexis-menendez)
-- **Email**: [FRONTEND-LEAD-NAME@email.com](https://FRONTEND-LEAD-NAME.onrender.com/contact)
-
+[**Deploying a MERN App to AWS (Tutorial):**](https://www.youtube.com/watch?v=eRdeAbGKyuk&themeRefresh=1)
