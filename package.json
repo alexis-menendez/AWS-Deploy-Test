@@ -34,6 +34,8 @@
         "paid:render-start": "npm run start:all",
         "free:render-build": "npm run install:all && npm run build:all",
         "free:render-start": "npm run start:all"
+        "start": "node server/dist/server.js",
+        "postinstall": "npm run install:all && npm run build:all"
     },
     "devDependencies": {
         "@tailwindcss/postcss": "^4.1.6",
